@@ -12,5 +12,5 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Build
-        run: mvn --batch-mode package
+      - run: src/scripts/increment-version.sh
+      - run: mvn --batch-mode package
