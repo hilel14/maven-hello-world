@@ -5,4 +5,4 @@ RUN mvn dependency:resolve
 COPY src ./src
 RUN mvn --batch-mode package
 ENTRYPOINT ["java", "-jar"]
-CMD ["hello-1.0-0.jar"]
+CMD ["hello-1.0.0.jar"]
