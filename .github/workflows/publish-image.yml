@@ -13,4 +13,4 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - run: src/scripts/increment-version.sh
-      - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - run: src/scripts/build-and-push.sh
