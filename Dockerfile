@@ -4,5 +4,6 @@ COPY pom.xml ./
 RUN mvn dependency:resolve
 COPY src ./src
 RUN mvn --batch-mode package
+USER games
 ENTRYPOINT ["java", "-jar"]
 CMD ["hello-1.0.0.jar"]
