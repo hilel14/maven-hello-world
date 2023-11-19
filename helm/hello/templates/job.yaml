@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hello
+spec:
+  template:
+    spec:
+      containers:
+        - name: hello
+          image: hilel14/hello:1.0.8
+          args: ["/opt/hilel14/target/hello-1.0.8.jar"]
+      restartPolicy: Never
+  backoffLimit: 0
