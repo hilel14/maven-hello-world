@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: hilel14/hello:1.0.8
-          args: ["/opt/hilel14/target/hello-1.0.8.jar"]
+          image: hilel14/hello:{{ .Values.appVersion }}
+          args: ["/opt/hilel14/target/hello-{{ .Values.appVersion }}.jar"]
       restartPolicy: Never
   backoffLimit: 0
