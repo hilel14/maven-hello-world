@@ -6,7 +6,7 @@ COPY src ./src
 RUN mvn --batch-mode package 
 #RUN mvn --batch-mode deploy
 
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /opt/hilel14
 COPY --from=build-env /opt/hilel14/target/*.jar ./
 #USER games
