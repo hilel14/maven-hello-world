@@ -7,7 +7,7 @@
 
   <groupId>com.hilel14</groupId>
   <artifactId>hello</artifactId>
-  <version>1.0.11</version>
+  <version>1.0.12</version>
 
   <name>hello</name>
   <url>https://github.com/hilel14/maven-hello-world</url>
