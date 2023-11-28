@@ -6,9 +6,9 @@ COPY src ./src
 RUN mvn --batch-mode package 
 #RUN mvn --batch-mode deploy
 
-FROM some-jre-image
+FROM openjdk:17-jdk-slim
 WORKDIR /opt/hilel14
-COPY --from=build-env WORKDIR /opt/hilel14/target/*.jar ./
+COPY --from=build-env /opt/hilel14/target/*.jar ./
 #USER games
 ENTRYPOINT ["java", "-jar"]
 CMD ["hello-1.0.0.jar"]
